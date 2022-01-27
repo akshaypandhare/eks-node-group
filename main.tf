@@ -13,7 +13,7 @@ resource "aws_eks_node_group" "this" {
   node_group_name = var.node_group_name
   node_role_arn = aws_iam_role.eks-worker.arn
   release_version = var.release_version
-  subnet_ids = ["subnet-084660f50eb9fbec1", "subnet-03e21851db757a22f"]
+  subnet_ids = var.subnet_ids
   tags = var.tags
   version = var.k8s_version
 
