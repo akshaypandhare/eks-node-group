@@ -1,53 +1,39 @@
-output "ami_type" {
-  description = "returns a string"
-  value       = aws_eks_node_group.this.ami_type
+output "eks_node_group_role_arn" {
+  description = "ARN of the worker nodes IAM role"
+  value       = module.eks_node_group.eks_node_group_role_arn
 }
 
-output "arn" {
-  description = "returns a string"
-  value       = aws_eks_node_group.this.arn
+output "eks_node_group_role_name" {
+  description = "Name of the worker nodes IAM role"
+  value       = module.eks_node_group.eks_node_group_role_name
 }
 
-output "capacity_type" {
-  description = "returns a string"
-  value       = aws_eks_node_group.this.capacity_type
+output "eks_node_group_id" {
+  description = "EKS Cluster name and EKS Node Group name separated by a colon"
+  value       = module.eks_node_group.eks_node_group_id
 }
 
-output "disk_size" {
-  description = "returns a number"
-  value       = aws_eks_node_group.this.disk_size
+output "eks_node_group_arn" {
+  description = "Amazon Resource Name (ARN) of the EKS Node Group"
+  value       = module.eks_node_group.eks_node_group_arn
 }
 
-output "id" {
-  description = "returns a string"
-  value       = aws_eks_node_group.this.id
+output "eks_node_group_resources" {
+  description = "List of objects containing information about underlying resources of the EKS Node Group"
+  value       = module.eks_node_group.eks_node_group_resources
 }
 
-output "instance_types" {
-  description = "returns a list of string"
-  value       = aws_eks_node_group.this.instance_types
+output "eks_node_group_status" {
+  description = "Status of the EKS Node Group"
+  value       = module.eks_node_group.eks_node_group_status
 }
 
-output "release_version" {
-  description = "returns a string"
-  value       = aws_eks_node_group.this.release_version
+output "eks_node_group_remote_access_security_group_id" {
+  description = "The ID of the security group generated to allow SSH access to the nodes, if this module generated one"
+  value       = module.eks_node_group.eks_node_group_remote_access_security_group_id
 }
 
-output "resources" {
-  description = "returns a list of object"
-  value       = aws_eks_node_group.this.resources
-}
-
-output "status" {
-  description = "returns a string"
-  value       = aws_eks_node_group.this.status
-}
-
-output "version" {
-  description = "returns a string"
-  value       = aws_eks_node_group.this.version
-}
-
-output "this" {
-  value = aws_eks_node_group.this
+output "eks_node_group_cbd_pet_name" {
+  description = "The pet name of this node group, if this module generated one"
+  value       = module.eks_node_group.eks_node_group_cbd_pet_name
 }
