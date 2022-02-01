@@ -26,7 +26,7 @@ variable "node_group_name" {
 variable "instance_types" {
   description = "Optional"
   type        = list(string)
-  default     = ["t3.meduim"]
+  default     = ["t3.medium"]
 }
 
 variable "min_size" {
